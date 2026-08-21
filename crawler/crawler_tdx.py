@@ -67,4 +67,5 @@ def get_tdx_title(main=api_main,title=api_title,parameter=api_parameter,token=ge
     
     print("Status Title Code:", title_response.raise_for_status())
     data0 = title_response.json()
+    return data0
     #print(data0)

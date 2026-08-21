@@ -22,7 +22,7 @@ options.add_argument("--disable-dev-shm-usage")  # Overcomes limited resource pr
 
 driver = webdriver.Chrome(options=options)
 
-def web_extention(url,pages=100)
+def web_extention(url,pages=10):
     try:
         target_url = url  # 💡 請替換成你的目標網址
         driver.get(target_url)
@@ -73,14 +73,14 @@ def web_extention(url,pages=100)
     # 範例：尋找所有的文章標題或商品名稱
   # 範例 C：抓取多個相同標籤或清單
   # 假設要抓取所有文章連結 <a>
-    '''
+    """
     links = soup.find_all("a", class_="full-cover-link")
     num = 0
     for link in links:
         print(link.get("title"), link.get("href"))
         num += 1
     print(num)
-    '''
+    """
 
 finally:
     driver.quit()

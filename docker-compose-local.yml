@@ -1,0 +1,144 @@
+# 整合版：本地 build（老師 Mac 用 / DockerHub image 架構不符時備用）
+# docker compose -f docker-compose-local.yml up -d --build rabbitmq flower mysql phpmyadmin worker_twse worker_tpex
+# 等 worker ready 後：docker compose -f docker-compose-local.yml up producer
+
+services: # 定義所有要啟動的服務
+  rabbitmq: # RabbitMQ 服務，負責訊息佇列管理
+    image: rabbitmq:3.13-management-alpine # 使用帶有管理介面的 RabbitMQ 映像檔
+    container_name: rabbitmq
+    restart: unless-stopped
+    ports:
+      - "5672:5672" # 映射 RabbitMQ 的訊息傳遞連接埠（預設 port）
+      - "15672:15672" # 映射 RabbitMQ 管理網頁的連接埠（用於網頁管理介面）
+    environment: # 環境變數
+      RABBITMQ_DEFAULT_USER: "worker" # 設定預設登入使用者名稱
+      RABBITMQ_DEFAULT_PASS: "worker" # 設定預設登入使用者密碼
+
+  flower: # Flower 服務，用於監控 Celery 任務狀態
+    image: mher/flower:latest # 使用最新版本的 Flower 映像檔
+    container_name: flower
+    restart: unless-stopped
+    ports:
+      - "5555:5555" # 映射 Flower 的網頁介面連接埠
+    depends_on:
+      - rabbitmq # 先啟動 rabbitmq 服務，確保 broker（MQ） 可用
+    command: ["celery", "--broker=amqp://worker:worker@rabbitmq:5672//", "flower", "--port=5555"]
+    # 啟動 Flower 並指定 RabbitMQ 為 broker
+  mysql:
+    image: mysql:8.0
+    container_name: mysql
+    restart: unless-stopped
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_DATABASE: mydb
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-1234}
+    volumes:
+      - mysql:/var/lib/mysql
+      # share volumes of docker container to outside volume, 
+      # let data persist
+      # 將 docker container 的 volumes 跟外部 volumes 做連結, 
+      # 讓資料不會因為 container close or update 而遺失
+    # 設定 mysql 使用原生認證的密碼 hash
+    command: --default-authentication-plugin=mysql_native_password
+
+  phpmyadmin:
+    image: phpmyadmin:latest
+    container_name: phpmyadmin
+    restart: unless-stopped
+    ports:
+      - "8080:80"
+    environment:
+      PMA_HOST: mysql
+    depends_on:
+      - mysql
+
+  worker_twse:
+    build: .
+    container_name: crawler_twse
+    command: uv run python -m celery -A crawler.worker worker --loglevel=info --hostname=twse@%h -Q twse
+    restart: unless-stopped
+    environment:
+      # ${變數:-預設值} 是 compose 的插值：同目錄 .env（或 shell 環境）有設就用設的值，
+      # 沒設就用預設的容器服務名——本機一切照舊；上雲要連別台機器時只改 .env（手冊16）
+      - TZ=Asia/Taipei
+      - RABBITMQ_HOST=${RABBITMQ_HOST:-rabbitmq}
+      - MYSQL_HOST=${MYSQL_HOST:-mysql}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD:-1234}   # 手冊16 起由部署指令從 Secret Manager 注入
+      - GCP_PROJECT_ID=${GCP_PROJECT_ID:-}       # 雙寫用：沒設就略過 BigQuery（手冊15）
+      - SPANNER_PROJECT_ID=${SPANNER_PROJECT_ID:-}  # 手冊16 Spanner 體驗用，平常不設
+      - SPANNER_INSTANCE=${SPANNER_INSTANCE:-}
+      - SPANNER_DATABASE=${SPANNER_DATABASE:-stockdb}
+      - MONGO_HOST=mongodb   # 補充F: worker 在容器內連 MongoDB 用服務名
+      - PYTHONPATH=/crawler
+    depends_on:
+      - rabbitmq
+    volumes:
+      - ./output:/crawler/output
+
+  worker_tpex:
+    build: .
+    container_name: crawler_tpex
+    command: uv run python -m celery -A crawler.worker worker --loglevel=info --hostname=tpex@%h -Q tpex
+    restart: unless-stopped
+    environment:
+      # ${變數:-預設值} 是 compose 的插值：同目錄 .env（或 shell 環境）有設就用設的值，
+      # 沒設就用預設的容器服務名——本機一切照舊；上雲要連別台機器時只改 .env（手冊16）
+      - TZ=Asia/Taipei
+      - RABBITMQ_HOST=${RABBITMQ_HOST:-rabbitmq}
+      - MYSQL_HOST=${MYSQL_HOST:-mysql}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD:-1234}   # 手冊16 起由部署指令從 Secret Manager 注入
+      - GCP_PROJECT_ID=${GCP_PROJECT_ID:-}       # 雙寫用：沒設就略過 BigQuery（手冊15）
+      - SPANNER_PROJECT_ID=${SPANNER_PROJECT_ID:-}  # 手冊16 Spanner 體驗用，平常不設
+      - SPANNER_INSTANCE=${SPANNER_INSTANCE:-}
+      - SPANNER_DATABASE=${SPANNER_DATABASE:-stockdb}
+      - MONGO_HOST=mongodb   # 補充F: worker 在容器內連 MongoDB 用服務名
+      - PYTHONPATH=/crawler
+    depends_on:
+      - rabbitmq
+    volumes:
+      - ./output:/crawler/output
+
+  producer:
+    build: .
+    container_name: crawler_producer
+    command: uv run python crawler/producer_multi_queue.py
+    environment:
+      - TZ=Asia/Taipei
+      - RABBITMQ_HOST=rabbitmq
+      - PYTHONPATH=/crawler
+    depends_on:
+      - rabbitmq
+
+
+  # ── MongoDB（補充F 用；平常不啟動，不影響主線）────────────────
+  # 啟動: docker compose -f docker-compose-local.yml up -d mongodb mongo-express
+  mongodb:
+    image: mongo:7
+    container_name: mongodb
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root   # 跟 MySQL 一樣的教學帳密慣例
+      MONGO_INITDB_ROOT_PASSWORD: "1234"
+    volumes:
+      - mongodb:/data/db
+
+  # mongo-express: MongoDB 的 Web 管理介面（= phpMyAdmin 之於 MySQL）
+  mongo-express:
+    image: mongo-express:latest
+    container_name: mongo-express
+    restart: unless-stopped
+    ports:
+      - "8082:8081"                      # 8082: 避開 phpMyAdmin(8080) 與 Airflow(8081)
+    environment:
+      ME_CONFIG_MONGODB_URL: mongodb://root:1234@mongodb:27017/
+      ME_CONFIG_BASICAUTH_USERNAME: root # 開網頁時要輸入的帳密
+      ME_CONFIG_BASICAUTH_PASSWORD: "1234"
+    depends_on:
+      - mongodb
+
+volumes:
+  mysql:
+  mongodb:
