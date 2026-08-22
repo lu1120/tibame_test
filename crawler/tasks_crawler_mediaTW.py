@@ -114,8 +114,7 @@ def crawler_mediaTW(url, page):
                 #df = pd.json_normalize(d)
 
             #df =  pd.read_json('data_d.json')
-            df = pd.DataFrame(data_list)
-            print(df)
+            
 
         # # 4. 測試讀取並列印部分內容
         #     print('\n--- 步道資料預覽 ---')
@@ -129,6 +128,9 @@ def crawler_mediaTW(url, page):
             print('伺服器回傳的內容不是標準的 JSON 格式！')
         except Exception as e:
             print(f'發生其他錯誤：{e}')
+            
+    df = pd.DataFrame(data_list)
+    print(df)
 
 
 
