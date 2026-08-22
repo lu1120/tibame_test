@@ -31,4 +31,4 @@ url_list = ['https://media.taiwan.net.tw/zh-tw/portal/travel?DataCode=Attraction
 for url in url_list:
     #print(f"預計抓{title}站點資料")
     # .delay() 是 Celery 的非同步派送捷徑, 呼叫完會立刻回傳, 不等 task 執行完
-    crawler_mediaTW.delay(url=url, page=5)
+    crawler_mediaTW.delay(url=url, page=1)

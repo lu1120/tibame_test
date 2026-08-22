@@ -1,0 +1,1188 @@
+
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>觀光遊憩主題資料集 :: 觀光多媒體開放資料—Open Multimedia Data in Tourism</title>
+    <link rel="icon" type="image/png" href="/Images/favicon.png">
+    <link href="/Content/fontawesome/all.css" rel="stylesheet" type="text/css">
+    <link href="/Content/portal/main.css" rel="stylesheet" />
+    <link href="/css/doc.index.css" rel="stylesheet" />
+    <link href="/Content/bootstrap-datetimepicker.min.css" type="text/css" rel="stylesheet" />
+    <link href="/Content/bootstrap-tagsinput/bootstrap-tagsinput.css" type="text/css" rel="stylesheet" />
+    
+    <style>
+        .text-collapse a.collapsed::after {
+            content: '+';
+        }
+
+        .text-collapse a:not(.collapsed)::after {
+            content: '-';
+        }
+    </style>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LMTNBD3PD1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-LMTNBD3PD1');
+    </script>
+</head>
+
+<body>
+    <noscript>
+        <div class="px-2 text-danger">
+            很抱歉，網站的某些功能在JavaScript沒有啟用的狀態下無法正常使用。
+        </div>
+    </noscript>
+        <a href="#C" id="gotocenter" title="跳到主要內容" tabindex="1" class="sr-only-focus outline-pink-bg-white">跳到主要內容</a>
+    <!-- 1 header：1-1 logo 1-2 language & main menu 1-3 right-nav -->
+    <nav class="navbar navbar-expand-lg navbar-light p-0 position-relative d-print-none" id="header">
+        <!-- 1-1 logo -->
+        <h1 class="sr-only">觀光多媒體開放資料</h1>
+        <div class="mr-auto">
+            <a class="navbar-brand" href="/zh-tw/portal" title="觀光多媒體開放資料">
+                <img height="52" alt="觀光多媒體開放資料 back to Index page" src="/Images/logo_media.svg"><strong style="display: none;">觀光多媒體開放資料</strong>
+            </a>
+        </div>
+
+        <!-- 1-2 language & main menu -->
+        <div class="d-flex flex-column justify-content-end pr-3 d-print-none">
+            <nav id="primary_nav_wrap">
+                <a href="#U" title="上方功能區塊" tabindex="3" id="AU" accesskey="U" name="U" class="sr-only-focus">:::</a>
+                <ul>
+                    <li><a href="/zh-tw/portal/home/sitemap">網站導覽</a></li>
+                            <li class="li-sep">|</li>
+                            <li><a href="/zh-tw/portal/user/terms">帳號申請</a></li>
+                            <li class="li-sep">|</li>
+                            <li><a href="/media?returnUrl=AQAAANCMnd8BFdERjHoAwE%2FCl%2BsBAAAACyPgvO%2Fe0Uiy6frZpDSr2gAAAAACAAAAAAAQZgAAAAEAACAAAACJaIqdGKgzaF3qiounNejjecfxg8PTCZ2nR4DoxCTgYgAAAAAOgAAAAAIAACAAAADjkiEKLc9VP0031oqP%2Bf%2F9oFvLzw1BDChHY8NkHvb581AAAACCylOolT8o4uxeyNycTfve9slsYRYKCKIjxe5nB5Hc5ePPpy0KyGebhar33pNVJczXDxDkGttyuWF9RwKQXI7ZtaPc1Sehrsl%2FTZjJwR7EBUAAAAAzyAJZB3uC6JvB5Sbtm0GZkm2k3U6V%2Fmn6Tp5QplrVMnwPm2gAS3TEjMRSOAeNZG%2BWVZxSe0%2Fr2PjNVAp%2FMmkA">帳號登入</a></li>
+                            <li class="li-sep">|</li>
+                            <li><a href="/media?returnUrl=AQAAANCMnd8BFdERjHoAwE%2FCl%2BsBAAAACyPgvO%2Fe0Uiy6frZpDSr2gAAAAACAAAAAAAQZgAAAAEAACAAAAD9RBI7Bg4P%2FjBCthhyjHBlPdVvqrwliA0h6zMf4UavVQAAAAAOgAAAAAIAACAAAADXm%2FSjIzIIFhW4hFU6VvgKRGG4zDu2f2iLuAgfiS82xCAAAABwu59g%2FM%2ByioJvTWdXSITHSn%2BA%2Ft73bbLrQv6mjpB0T0AAAAAO1WoGFNkczOtF5zrPCw6fN5KMxk%2FcswrEJVcxmHhMjkCQVVQGehUZpzLyc0qF2HeP3EgJd7vnyxF1tDCQxk2w">補助活動登載暨憑證申請</a></li>
+                            <li class="li-sep">|</li>
+                            <li><a href="/zh-tw/portal/home/faq">常見問題</a></li>
+                    <li class="li-sep">|</li>
+                        <li><a href="/en-us/portal">English</a></li>
+                </ul>
+            </nav>
+
+            <!--RIGHT SIDE NAV-->
+            <div id="mySideNav" class="sidenav" aria-hidden="true">
+                <a href="#" class="closebtn" id="closebutton" alt="關閉選單" tabindex="-1"><span class="sr-only sr-only-focus">關閉選單</span><i class="fa fa-times"></i></a>
+                <div id="menu-top" class="row mx-0">
+
+<a href="/zh-tw/portal/home/sitemap" class="col-auto" tabindex="-1">網站導覽</a>
+        <a href="/zh-tw/portal/user/terms" class="col-auto" tabindex="-1">帳號申請</a>
+        <a href="/media?returnUrl=AQAAANCMnd8BFdERjHoAwE%2FCl%2BsBAAAACyPgvO%2Fe0Uiy6frZpDSr2gAAAAACAAAAAAAQZgAAAAEAACAAAACJaIqdGKgzaF3qiounNejjecfxg8PTCZ2nR4DoxCTgYgAAAAAOgAAAAAIAACAAAADjkiEKLc9VP0031oqP%2Bf%2F9oFvLzw1BDChHY8NkHvb581AAAACCylOolT8o4uxeyNycTfve9slsYRYKCKIjxe5nB5Hc5ePPpy0KyGebhar33pNVJczXDxDkGttyuWF9RwKQXI7ZtaPc1Sehrsl%2FTZjJwR7EBUAAAAAzyAJZB3uC6JvB5Sbtm0GZkm2k3U6V%2Fmn6Tp5QplrVMnwPm2gAS3TEjMRSOAeNZG%2BWVZxSe0%2Fr2PjNVAp%2FMmkA" class="col-auto" tabindex="-1">帳號登入</a>
+        <a href="/media?returnUrl=AQAAANCMnd8BFdERjHoAwE%2FCl%2BsBAAAACyPgvO%2Fe0Uiy6frZpDSr2gAAAAACAAAAAAAQZgAAAAEAACAAAAD9RBI7Bg4P%2FjBCthhyjHBlPdVvqrwliA0h6zMf4UavVQAAAAAOgAAAAAIAACAAAADXm%2FSjIzIIFhW4hFU6VvgKRGG4zDu2f2iLuAgfiS82xCAAAABwu59g%2FM%2ByioJvTWdXSITHSn%2BA%2Ft73bbLrQv6mjpB0T0AAAAAO1WoGFNkczOtF5zrPCw6fN5KMxk%2FcswrEJVcxmHhMjkCQVVQGehUZpzLyc0qF2HeP3EgJd7vnyxF1tDCQxk2w" class="col-auto" tabindex="-1">補助活動登載暨憑證申請</a>
+        <a href="/zh-tw/portal/home/faq" class="col-auto" tabindex="-1">常見問題</a>
+    <a href="/en-us/portal" class="col-auto" tabindex="-1">English</a>
+
+                </div>
+                <div id="menu-middle">
+                    <div class="tree">
+                        <ul>
+                            <li><a class="" tabindex="-1" href="/zh-tw/portal/media">觀光文宣資料</a></li>
+                                <li><a class="" tabindex="-1" href="/zh-tw/portal/travel">觀光遊憩主題資料集</a></li>
+                                                    </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="right-nav-btn" class="bk-menubtn">
+            <span class="text-center fa fa-bars" id="menubtn"></span>
+            <span class="text-center">menu</span>
+        </div>
+    </nav>
+    <noscript>
+        <div class="noscript-sidenav" aria-hidden="true">
+            <div id="menu-top" class="row mx-0">
+
+<a href="/zh-tw/portal/home/sitemap" class="col-auto" tabindex="-1">網站導覽</a>
+        <a href="/zh-tw/portal/user/terms" class="col-auto" tabindex="-1">帳號申請</a>
+        <a href="/media?returnUrl=AQAAANCMnd8BFdERjHoAwE%2FCl%2BsBAAAACyPgvO%2Fe0Uiy6frZpDSr2gAAAAACAAAAAAAQZgAAAAEAACAAAACJaIqdGKgzaF3qiounNejjecfxg8PTCZ2nR4DoxCTgYgAAAAAOgAAAAAIAACAAAADjkiEKLc9VP0031oqP%2Bf%2F9oFvLzw1BDChHY8NkHvb581AAAACCylOolT8o4uxeyNycTfve9slsYRYKCKIjxe5nB5Hc5ePPpy0KyGebhar33pNVJczXDxDkGttyuWF9RwKQXI7ZtaPc1Sehrsl%2FTZjJwR7EBUAAAAAzyAJZB3uC6JvB5Sbtm0GZkm2k3U6V%2Fmn6Tp5QplrVMnwPm2gAS3TEjMRSOAeNZG%2BWVZxSe0%2Fr2PjNVAp%2FMmkA" class="col-auto" tabindex="-1">帳號登入</a>
+        <a href="/media?returnUrl=AQAAANCMnd8BFdERjHoAwE%2FCl%2BsBAAAACyPgvO%2Fe0Uiy6frZpDSr2gAAAAACAAAAAAAQZgAAAAEAACAAAAD9RBI7Bg4P%2FjBCthhyjHBlPdVvqrwliA0h6zMf4UavVQAAAAAOgAAAAAIAACAAAADXm%2FSjIzIIFhW4hFU6VvgKRGG4zDu2f2iLuAgfiS82xCAAAABwu59g%2FM%2ByioJvTWdXSITHSn%2BA%2Ft73bbLrQv6mjpB0T0AAAAAO1WoGFNkczOtF5zrPCw6fN5KMxk%2FcswrEJVcxmHhMjkCQVVQGehUZpzLyc0qF2HeP3EgJd7vnyxF1tDCQxk2w" class="col-auto" tabindex="-1">補助活動登載暨憑證申請</a>
+        <a href="/zh-tw/portal/home/faq" class="col-auto" tabindex="-1">常見問題</a>
+    <a href="/en-us/portal" class="col-auto" tabindex="-1">English</a>
+
+            </div>
+        </div>
+    </noscript>
+    <!--2 content -->
+    <div class="container-fluid p-0">
+<!-- 公告 -->
+
+        <div class="px-3 py-1 text-right d-print-none">
+            <span class="btn">字級大小</span>
+            <a href="#" id="smallSize" data-size-name="small" class="btn btn-light" title="小字級" role="button"><span class="text-small">小</span></a>
+            <a href="#" id="mediumSize" data-size-name="medium" class="btn btn-light" title="中字級" role="button"><span class="text-medium">中</span></a>
+            <a href="#" id="largeSize" data-size-name="large" class="btn btn-light" title="大字級" role="button"><span class="text-large">大</span></a>
+        </div>
+            <!--2 main menu -->
+            <div class="d-print-none">
+                <div class="row no-gutters">
+                    <div class="col-lg-6">
+                        <a href="/zh-tw/portal/media" id="media" class="btn btn-default btn-topmenu btn-block ">
+                            <span class="icon baseline">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150"><path class="cls-1" d="M40.85,89.25H24.2a9.33,9.33,0,0,1-9.32-9.33V30.58a9.33,9.33,0,0,1,9.32-9.33H79.92a9.34,9.34,0,0,1,9.33,9.33V46.32a3.75,3.75,0,0,0,7.5,0V30.58A16.85,16.85,0,0,0,79.92,13.75H24.2A16.84,16.84,0,0,0,7.38,30.58V79.92A16.84,16.84,0,0,0,24.2,96.75H40.85a3.75,3.75,0,0,0,0-7.5Z" /><path class="cls-1" d="M123.3,72.25h-9.18a2.74,2.74,0,0,0,0-.5V64.32A9.33,9.33,0,0,0,104.84,55H82.41a9.33,9.33,0,0,0-9.32,9.32v7.43a2.74,2.74,0,0,0,0,.5H67.58A16.85,16.85,0,0,0,50.75,89.08v31.34a16.85,16.85,0,0,0,16.83,16.83H123.3a3.75,3.75,0,1,0,0-7.5H67.58a9.34,9.34,0,0,1-9.33-9.33V89.08a9.34,9.34,0,0,1,9.33-9.33H123.3a9.34,9.34,0,0,1,9.33,9.33v31.34a3.75,3.75,0,1,0,7.5,0V89.08A16.85,16.85,0,0,0,123.3,72.25Zm-42.71-.5V64.32a1.83,1.83,0,0,1,1.82-1.82h22.43a1.83,1.83,0,0,1,1.82,1.82v7.43a4,4,0,0,0,0,.5H80.55A4,4,0,0,0,80.59,71.75Z" /><path class="cls-1" d="M44.5,38.31a3.75,3.75,0,0,0-5.62,3.25V66.08a3.75,3.75,0,0,0,1.87,3.25,3.77,3.77,0,0,0,3.75,0L65.75,57.07a3.75,3.75,0,0,0,0-6.5Z" /><path class="cls-1" d="M86,93.6a3.74,3.74,0,0,0-5.3,0,18.25,18.25,0,1,0,12.91-5.35,3.75,3.75,0,0,0,0,7.5A10.74,10.74,0,1,1,86,98.9,3.74,3.74,0,0,0,86,93.6Z" /><path class="cls-1" d="M116.63,84.75a3.75,3.75,0,0,0,0,7.5h6a3.75,3.75,0,0,0,0-7.5Z" /></svg>
+                            </span>
+                            <span class="text-dark">觀光文宣資料</span>
+                        </a>
+                    </div>
+                        <div class="col-lg-6">
+                            <a href="/zh-tw/portal/travel" class="btn btn-action btn-default btn-topmenu btn-block active">
+                                <span class="icon baseline">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150"><path class="cls-1" d="M71.89,34.69a37.76,37.76,0,0,0-53.53.13A37.09,37.09,0,0,0,7.5,61.4c.07,8.51,2.32,17.85,6.69,27.76a3.75,3.75,0,0,0,6.86-3c-4-9-6-17.3-6.05-24.78A29.65,29.65,0,0,1,23.69,40.1a30.14,30.14,0,0,1,21.56-9A30.46,30.46,0,0,1,75.5,61.4c.19,25.13-22.35,52.43-30.24,61.2a170,170,0,0,1-11.77-14.88A3.75,3.75,0,0,0,27.35,112a164.32,164.32,0,0,0,15.22,18.72,3.76,3.76,0,0,0,2.67,1.13h0a3.74,3.74,0,0,0,2.66-1.11c1.44-1.46,35.35-36,35.09-69.42A37.92,37.92,0,0,0,71.89,34.69Z" /><circle class="cls-1" cx="45.5" cy="65.88" r="15" /><path class="cls-1" d="M93.5,48h44.25a3.75,3.75,0,0,0,0-7.5H93.5a3.75,3.75,0,0,0,0,7.5Z" /><path class="cls-1" d="M137.75,64.5H96.5a3.75,3.75,0,0,0,0,7.5h41.25a3.75,3.75,0,0,0,0-7.5Z" /><path class="cls-1" d="M137.75,88.5H89.5a3.75,3.75,0,0,0,0,7.5h48.25a3.75,3.75,0,0,0,0-7.5Z" /><path class="cls-1" d="M137.75,112.5H77a3.75,3.75,0,0,0,0,7.5h60.75a3.75,3.75,0,0,0,0-7.5Z" /></svg>
+                                </span>
+                                <span class="">觀光遊憩主題資料集</span>
+                            </a>
+                        </div>
+                                    </div>
+            </div>
+                    <nav aria-label="m-breadcrumb">
+                <ol class="m-breadcrumb">
+                    <a href="#C" title="中央內容區塊" id="AC" accesskey="C" name="C" class="sr-only-focus">:::</a>
+                    <li class="m-breadcrumb-item"><a href="/zh-tw/portal" class="dd-link shutter half"> <i class="fas fa-home pr-1"></i> 首頁</a></li>
+                    <li class="m-breadcrumb-item"><a href="/zh-tw/portal/travel" class="dd-link shutter half">觀光遊憩主題資料集</a></li>
+                </ol>
+            </nav>
+        
+
+<div class="container">
+    <!--3 search bar-->
+<form action="/zh-tw/portal/travel" method="get">        <div class="form-group row form-block-row" id="div-type">
+            <label class="col-md-2 col-form-label form-block-l">
+                資料類型
+            </label>
+            <div class="col-md-10 form-block-r d-flex justify-content-start">
+                    <div class="form-check form-check-inline">
+                        <input id="datacode-all" type="radio" name="DataCode" class="form-check-input" autocomplete="off" value="" >
+                        <label class="form-check-label" for="datacode-all">不限</label>
+                    </div>
+                        <div class="form-check form-check-inline">
+                            <input id="datacode-Attraction" type="radio" name="DataCode" class="form-check-input" autocomplete="off" value="Attraction" data-code="Attraction" checked>
+                            <label class="form-check-label" for="datacode-Attraction">景點</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input id="datacode-Event" type="radio" name="DataCode" class="form-check-input" autocomplete="off" value="Event" data-code="Event" >
+                            <label class="form-check-label" for="datacode-Event">活動</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input id="datacode-Hotel" type="radio" name="DataCode" class="form-check-input" autocomplete="off" value="Hotel" data-code="Hotel" >
+                            <label class="form-check-label" for="datacode-Hotel">住宿</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input id="datacode-Restaurant" type="radio" name="DataCode" class="form-check-input" autocomplete="off" value="Restaurant" data-code="Restaurant" >
+                            <label class="form-check-label" for="datacode-Restaurant">餐飲</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input id="datacode-TourismServiceSite" type="radio" name="DataCode" class="form-check-input" autocomplete="off" value="TourismServiceSite" data-code="TourismServiceSite" >
+                            <label class="form-check-label" for="datacode-TourismServiceSite">旅遊服務站點</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input id="datacode-CyclingRoute" type="radio" name="DataCode" class="form-check-input" autocomplete="off" value="CyclingRoute" data-code="CyclingRoute" >
+                            <label class="form-check-label" for="datacode-CyclingRoute">自行車道</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input id="datacode-Trail" type="radio" name="DataCode" class="form-check-input" autocomplete="off" value="Trail" data-code="Trail" >
+                            <label class="form-check-label" for="datacode-Trail">步道</label>
+                        </div>
+
+            </div>
+        </div>
+        <div class="form-group row form-block-row">
+            <label for="DataId" class="col-md-2 col-form-label form-block-l">ID</label>
+            <div class="col-md-6 form-block-r">
+                <input type="text" class="form-control" name="DataId" id="DataId" value="" placeholder="請輸入資料編號(ID)">
+            </div>
+        </div>
+        <div class="form-group row form-block-row" id="div-kw-col">
+            <label for="Field" class="col-md-2 col-form-label form-block-l">
+                關鍵字搜尋欄位
+            </label>
+            <div class="col-md-6 form-block-r">
+                <select class="form-control" id="Field" name="Field"><option value="">關鍵字搜尋欄位</option>
+<option value="name">名稱</option>
+<option value="description">文字描述</option>
+<option value="telephone">聯絡電話</option>
+<option value="address">郵政地址</option>
+</select>
+            </div>
+        </div>
+        <div class="form-group row form-block-row" id="div-keyword">
+            <label for="Keyword" class="col-md-2 col-form-label form-block-l">關鍵字</label>
+            <div class="col-md-6 form-block-r">
+                <input type="text" class="form-control" name="Keyword" id="Keyword" value="" placeholder="請輸入關鍵字">
+            </div>
+        </div>
+        <div class="form-group row form-block-row">
+            <label class="col-md-2 col-form-label form-block-l">
+                熱門關鍵字
+            </label>
+                <div class="col-md-10 form-block-r">
+                        <a href="/zh-tw/portal/travel?Keyword=%E5%8F%B0%E7%81%A3%E5%A5%BD%E6%B9%AF" class="badge badge-hottag" title="開啟熱門關鍵字 台灣好湯 查詢結果">
+                            <i class="fas fa-tag pr-2"></i><span class="sr-only">關鍵字標籤</span>台灣好湯
+                        </a>
+                        <a href="/zh-tw/portal/travel?Keyword=%E8%87%AA%E8%A1%8C%E8%BB%8A%E8%A7%80%E5%85%89" class="badge badge-hottag" title="開啟熱門關鍵字 自行車觀光 查詢結果">
+                            <i class="fas fa-tag pr-2"></i><span class="sr-only">關鍵字標籤</span>自行車觀光
+                        </a>
+                        <a href="/zh-tw/portal/travel?Keyword=%E9%90%B5%E9%81%93%E8%A7%80%E5%85%89" class="badge badge-hottag" title="開啟熱門關鍵字 鐵道觀光 查詢結果">
+                            <i class="fas fa-tag pr-2"></i><span class="sr-only">關鍵字標籤</span>鐵道觀光
+                        </a>
+                        <a href="/zh-tw/portal/travel?Keyword=%E4%BB%B2%E5%A4%8F%E7%AF%80" class="badge badge-hottag" title="開啟熱門關鍵字 仲夏節 查詢結果">
+                            <i class="fas fa-tag pr-2"></i><span class="sr-only">關鍵字標籤</span>仲夏節
+                        </a>
+                        <a href="/zh-tw/portal/travel?Keyword=%E7%BE%8E%E9%A3%9F%E4%B8%BB%E9%A1%8C" class="badge badge-hottag" title="開啟熱門關鍵字 美食主題 查詢結果">
+                            <i class="fas fa-tag pr-2"></i><span class="sr-only">關鍵字標籤</span>美食主題
+                        </a>
+                </div>
+        </div>
+        <div id="div-advanced">
+            <div class="text-collapse">
+                <a class="collapsed text-dark" data-toggle="collapse" href="#collapse_advanced" role="button">
+                    進階搜尋功能
+                </a>
+            </div>
+            <div class="collapse  mt-3" id="collapse_advanced">
+                <div class="form-group row form-block-row" id="div-county">
+                    <label for="County" class="col-md-2 col-form-label form-block-l">
+                        縣市別
+                    </label>
+                    <div class="col-md-10 form-block-r d-flex justify-content-start">
+                        <div class="">
+                            <select class="form-control" id="County" name="County"><option value="">不限</option>
+<option value="臺北市">臺北市</option>
+<option value="臺中市">臺中市</option>
+<option value="基隆市">基隆市</option>
+<option value="臺南市">臺南市</option>
+<option value="高雄市">高雄市</option>
+<option value="新北市">新北市</option>
+<option value="宜蘭縣">宜蘭縣</option>
+<option value="桃園市">桃園市</option>
+<option value="嘉義市">嘉義市</option>
+<option value="新竹縣">新竹縣</option>
+<option value="苗栗縣">苗栗縣</option>
+<option value="南投縣">南投縣</option>
+<option value="彰化縣">彰化縣</option>
+<option value="新竹市">新竹市</option>
+<option value="雲林縣">雲林縣</option>
+<option value="嘉義縣">嘉義縣</option>
+<option value="屏東縣">屏東縣</option>
+<option value="花蓮縣">花蓮縣</option>
+<option value="臺東縣">臺東縣</option>
+<option value="金門縣">金門縣</option>
+<option value="澎湖縣">澎湖縣</option>
+<option value="連江縣">連江縣</option>
+</select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row form-block-row" id="div-update-year">
+                    <label for="UpdateYearStart" class="col-md-2 col-form-label form-block-l">
+                        更新時間
+                    </label>
+                    <div class="col-md-10 form-block-r d-flex justify-content-start">
+                        <div class="form-inline">
+                            <select class="form-control mr-1" id="UpdateYearStart" name="UpdateYearStart" title="更新時間開始年份"><option value="">年份</option>
+<option value="2026">2026</option>
+<option value="2025">2025</option>
+<option value="2024">2024</option>
+<option value="2023">2023</option>
+<option value="2022">2022</option>
+<option value="2021">2021</option>
+<option value="2020">2020</option>
+<option value="2019">2019</option>
+<option value="2018">2018</option>
+<option value="2017">2017</option>
+<option value="2016">2016</option>
+<option value="2015">2015</option>
+<option value="2014">2014</option>
+<option value="2013">2013</option>
+<option value="2012">2012</option>
+<option value="2011">2011</option>
+<option value="2010">2010</option>
+<option value="2009">2009</option>
+<option value="2008">2008</option>
+<option value="2007">2007</option>
+<option value="2006">2006</option>
+<option value="2005">2005</option>
+<option value="2004">2004</option>
+<option value="2003">2003</option>
+<option value="2002">2002</option>
+<option value="2001">2001</option>
+<option value="2000">2000</option>
+<option value="1999">1999</option>
+<option value="1998">1998</option>
+<option value="1997">1997</option>
+<option value="1996">1996</option>
+<option value="1995">1995</option>
+<option value="1994">1994</option>
+<option value="1993">1993</option>
+<option value="1992">1992</option>
+<option value="1991">1991</option>
+<option value="1990">1990</option>
+<option value="1989">1989</option>
+<option value="1988">1988</option>
+<option value="1987">1987</option>
+<option value="1986">1986</option>
+<option value="1985">1985</option>
+<option value="1984">1984</option>
+<option value="1983">1983</option>
+<option value="1982">1982</option>
+<option value="1981">1981</option>
+<option value="1980">1980</option>
+<option value="1979">1979</option>
+<option value="1978">1978</option>
+<option value="1977">1977</option>
+<option value="1976">1976</option>
+<option value="1975">1975</option>
+<option value="1974">1974</option>
+<option value="1973">1973</option>
+<option value="1972">1972</option>
+<option value="1971">1971</option>
+<option value="1970">1970</option>
+<option value="1969">1969</option>
+<option value="1968">1968</option>
+<option value="1967">1967</option>
+<option value="1966">1966</option>
+<option value="1965">1965</option>
+<option value="1964">1964</option>
+<option value="1963">1963</option>
+<option value="1962">1962</option>
+<option value="1961">1961</option>
+<option value="1960">1960</option>
+<option value="1959">1959</option>
+<option value="1958">1958</option>
+<option value="1957">1957</option>
+<option value="1956">1956</option>
+<option value="1955">1955</option>
+<option value="1954">1954</option>
+<option value="1953">1953</option>
+<option value="1952">1952</option>
+<option value="1951">1951</option>
+<option value="1950">1950</option>
+</select>
+                            <select class="form-control" id="UpdateMonthStart" name="UpdateMonthStart" title="更新時間開始月份"><option value="">月份</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+</select>
+                        </div>
+                        <div class="mx-3"> - </div>
+                        <div class="form-inline">
+                            <select class="form-control mr-1" id="UpdateYearEnd" name="UpdateYearEnd" title="更新時間結束年份"><option value="">年份</option>
+<option value="2026">2026</option>
+<option value="2025">2025</option>
+<option value="2024">2024</option>
+<option value="2023">2023</option>
+<option value="2022">2022</option>
+<option value="2021">2021</option>
+<option value="2020">2020</option>
+<option value="2019">2019</option>
+<option value="2018">2018</option>
+<option value="2017">2017</option>
+<option value="2016">2016</option>
+<option value="2015">2015</option>
+<option value="2014">2014</option>
+<option value="2013">2013</option>
+<option value="2012">2012</option>
+<option value="2011">2011</option>
+<option value="2010">2010</option>
+<option value="2009">2009</option>
+<option value="2008">2008</option>
+<option value="2007">2007</option>
+<option value="2006">2006</option>
+<option value="2005">2005</option>
+<option value="2004">2004</option>
+<option value="2003">2003</option>
+<option value="2002">2002</option>
+<option value="2001">2001</option>
+<option value="2000">2000</option>
+<option value="1999">1999</option>
+<option value="1998">1998</option>
+<option value="1997">1997</option>
+<option value="1996">1996</option>
+<option value="1995">1995</option>
+<option value="1994">1994</option>
+<option value="1993">1993</option>
+<option value="1992">1992</option>
+<option value="1991">1991</option>
+<option value="1990">1990</option>
+<option value="1989">1989</option>
+<option value="1988">1988</option>
+<option value="1987">1987</option>
+<option value="1986">1986</option>
+<option value="1985">1985</option>
+<option value="1984">1984</option>
+<option value="1983">1983</option>
+<option value="1982">1982</option>
+<option value="1981">1981</option>
+<option value="1980">1980</option>
+<option value="1979">1979</option>
+<option value="1978">1978</option>
+<option value="1977">1977</option>
+<option value="1976">1976</option>
+<option value="1975">1975</option>
+<option value="1974">1974</option>
+<option value="1973">1973</option>
+<option value="1972">1972</option>
+<option value="1971">1971</option>
+<option value="1970">1970</option>
+<option value="1969">1969</option>
+<option value="1968">1968</option>
+<option value="1967">1967</option>
+<option value="1966">1966</option>
+<option value="1965">1965</option>
+<option value="1964">1964</option>
+<option value="1963">1963</option>
+<option value="1962">1962</option>
+<option value="1961">1961</option>
+<option value="1960">1960</option>
+<option value="1959">1959</option>
+<option value="1958">1958</option>
+<option value="1957">1957</option>
+<option value="1956">1956</option>
+<option value="1955">1955</option>
+<option value="1954">1954</option>
+<option value="1953">1953</option>
+<option value="1952">1952</option>
+<option value="1951">1951</option>
+<option value="1950">1950</option>
+</select>
+                            <select class="form-control" id="UpdateMonthEnd" name="UpdateMonthEnd" title="更新時間結束月份"><option value="">月份</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+</select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row form-block-row d-none filter-class1" id="div-attraction-class">
+                    <label for="AttractionClass" class="col-md-2 col-form-label form-block-l">
+                        景點類型
+                    </label>
+                    <div class="col-md-10 form-block-r d-flex justify-content-start">
+                        <div class="">
+                            <select class="form-control" id="AttractionClass" name="AttractionClass"><option value="">不限</option>
+<option value="1081">文化類</option>
+<option value="1082">生態類</option>
+<option value="1083">文化資產類</option>
+<option value="1084">宗教廟宇類</option>
+<option value="1085">藝術類</option>
+<option value="1086">商圈商店類</option>
+<option value="1087">國家公園類</option>
+<option value="1088">國家風景區類</option>
+<option value="1089">休閒農業類</option>
+<option value="1090">溫泉類</option>
+<option value="1091">自然風景類</option>
+<option value="1092">遊憩類</option>
+<option value="1093">體育健身類</option>
+<option value="1094">觀光工廠類</option>
+<option value="1095">都會公園類</option>
+<option value="1096">森林遊樂區類</option>
+<option value="1097">平地森林園區類</option>
+<option value="1098">國家自然公園類</option>
+<option value="1099">公園綠地類</option>
+<option value="1100">觀光遊樂業類</option>
+<option value="1101">原住民文化類</option>
+<option value="1102">客家文化類</option>
+<option value="1103">交通場站類</option>
+<option value="1104">水域環境類</option>
+<option value="1105">藝文場館類</option>
+<option value="1106">生態場館類</option>
+<option value="1107">娛樂場館類</option>
+<option value="1108">其他</option>
+</select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row form-block-row d-none filter-class1" id="div-event-class">
+                    <label for="EventClass" class="col-md-2 col-form-label form-block-l">
+                        活動類型
+                    </label>
+                    <div class="col-md-10 form-block-r d-flex justify-content-start">
+                        <div class="">
+                            <select class="form-control" id="EventClass" name="EventClass"><option value="">不限</option>
+<option value="1116">節慶活動</option>
+<option value="1117">傳統民俗型</option>
+<option value="1118">宗教信仰型</option>
+<option value="1119">原住民文化型</option>
+<option value="1120">客家文化型</option>
+<option value="1121">藝文慶典活動</option>
+<option value="1122">生態體驗型</option>
+<option value="1123">地方特產型</option>
+<option value="1124">娛樂型活動</option>
+<option value="1125">體育賽會活動</option>
+<option value="1126">商貿會展型</option>
+<option value="1127">藝文活動</option>
+<option value="1128">音樂</option>
+<option value="1129">戲劇</option>
+<option value="1130">舞蹈</option>
+<option value="1131">親子</option>
+<option value="1132">獨立音樂</option>
+<option value="1133">展覽</option>
+<option value="1134">講座</option>
+<option value="1135">電影</option>
+<option value="1136">綜藝</option>
+<option value="1137">競賽</option>
+<option value="1138">徵選</option>
+<option value="1139">演唱會</option>
+<option value="1140">研習課程</option>
+<option value="1141">閱讀</option>
+<option value="1142">其他藝文活動</option>
+<option value="1143">年度活動</option>
+<option value="1144">遊憩活動</option>
+<option value="1145">地方社區型活動</option>
+<option value="1325">自行車活動</option>
+<option value="1146">其他活動（Other）</option>
+</select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row form-block-row d-none filter-class1" id="div-hotel-class">
+                    <label for="HotelClass" class="col-md-2 col-form-label form-block-l">
+                        旅宿類型
+                    </label>
+                    <div class="col-md-10 form-block-r d-flex justify-content-start">
+                        <div class="">
+                            <select class="form-control" id="HotelClass" name="HotelClass"><option value="">不限</option>
+<option value="1210">國際觀光旅館</option>
+<option value="1211">一般觀光旅館</option>
+<option value="1212">一般旅館</option>
+<option value="1213">民宿</option>
+<option value="1214">露營區</option>
+<option value="1215">其他</option>
+</select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row form-block-row d-none filter-class1" id="div-cuisine-class">
+                    <label for="CuisineClass" class="col-md-2 col-form-label form-block-l">
+                        餐飲料理類型
+                    </label>
+                    <div class="col-md-10 form-block-r d-flex justify-content-start">
+                        <div class="">
+                            <select class="form-control" id="CuisineClass" name="CuisineClass"><option value="">不限</option>
+<option value="1151">台灣小吃/台菜（Taiwanese Cuisine）</option>
+<option value="1152">中式料理 — 中餐八大菜系（Chinese Cuisine — Eight Cuisines of China）</option>
+<option value="1153">港式料理（Hong Kong Cuisine）</option>
+<option value="1154">日式料理（Japanese Cuisine）</option>
+<option value="1155">韓式料理（Korean Cuisine）</option>
+<option value="1156">南亞料理 — 印度等料理（South Asian Cuisine）</option>
+<option value="1157">東南亞料理 — 星、馬、泰、越、菲、印尼等料理（Southeast Asian Cuisine）</option>
+<option value="1158">美式/歐式料理 — 義、法、德、西班牙、俄羅斯等料理（American/European Cuisine — Italian, French, German, Spanish, Russian, etc.）</option>
+<option value="1159">其他異國料理（Other Exotic Dishes）</option>
+<option value="1160">夜市小吃（Taiwan Snacks）</option>
+<option value="1161">甜點冰品（Desserts And Ice）</option>
+<option value="1162">麵包糕點（Bakery）</option>
+<option value="1163">非酒精飲品 — 咖啡、茶等（Non-Alcoholic Beverages — Coffee, Tea, etc.）</option>
+<option value="1164">酒類飲品 — 雞尾酒、葡萄酒、烈酒等（Alcoholic Beveragess — Cocktails, Wines, Hard Liquor, etc.）</option>
+<option value="1165">燒烤/鐵板燒（BBQ/Teppanyaki）</option>
+<option value="1166">火鍋（Hot Pot）</option>
+<option value="1167">海鮮（Seafood）</option>
+<option value="1168">牛排（Steak）</option>
+<option value="1169">速食（Fast Food）</option>
+<option value="1170">連鎖餐飲（Chain Catering）</option>
+<option value="1171">吃到飽（All You Can Eat Buffet）</option>
+<option value="1172">便當/自助餐（Boxed Meal/Cafeteria）</option>
+<option value="1173">牛肉麵（Beef Noodle Soup）</option>
+<option value="1174">粥品（Congee）</option>
+<option value="1175">地方特產（Local specialty）</option>
+<option value="1176">伴手禮/禮盒（Gift）</option>
+<option value="1177">純素飲食（Vegan Diet）</option>
+<option value="1178">素食飲食（Vegetarian Diet）</option>
+<option value="1179">清真飲食（Halal Diet）</option>
+<option value="1180">無麩質飲食（Gluten Free Diet）</option>
+<option value="1181">健康飲食 — 低鹽、低熱量等（Healthy Diet — Low Salt, Low Calorie Diet, etc.）</option>
+<option value="1182">其他（Other）</option>
+</select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row form-block-row d-none filter-class1" id="div-site-class">
+                    <label for="TourismServiceSiteClass" class="col-md-2 col-form-label form-block-l">
+                        旅遊服務站點類型
+                    </label>
+                    <div class="col-md-10 form-block-r d-flex justify-content-start">
+                        <div class="">
+                            <select class="form-control" id="TourismServiceSiteClass" name="TourismServiceSiteClass"><option value="">不限</option>
+<option value="1229">旅客服務中心</option>
+<option value="1230">旅遊服務中心</option>
+<option value="1231">國家風景區遊客中心</option>
+<option value="1232">縣市遊客中心</option>
+<option value="1233">借問站</option>
+</select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row form-block-row d-none filter-class1" id="div-cycling-class">
+                    <label for="CyclingRouteClass" class="col-md-2 col-form-label form-block-l">
+                        自行車道類型
+                    </label>
+                    <div class="col-md-10 form-block-r d-flex justify-content-start">
+                        <div class="">
+                            <select class="form-control" id="CyclingRouteClass" name="CyclingRouteClass"><option value="">不限</option>
+<option value="1281">0級（適合幼兒騎乘）</option>
+<option value="1282">1級（適合親子同遊）</option>
+<option value="1283">2級（適合具有中長程騎乘經驗者）</option>
+<option value="1284">3級（適合具有長途經驗者）</option>
+</select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row form-block-row d-none filter-class1" id="div-trail-class">
+                    <label for="TrailClass" class="col-md-2 col-form-label form-block-l">
+                        步道類型
+                    </label>
+                    <div class="col-md-10 form-block-r d-flex justify-content-start">
+                        <div class="">
+                            <select class="form-control" id="TrailClass" name="TrailClass"><option value="">不限</option>
+<option value="1254">第 0 級</option>
+<option value="1255">第 1 級</option>
+<option value="1256">第 2 級</option>
+<option value="1257">第 3 級</option>
+<option value="1258">第 4 級</option>
+<option value="1259">第 5 級</option>
+<option value="1260">第 6 級</option>
+</select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col pb-1 text-right" id="div-search">
+            <button type="submit" title="查詢" class="btn btn-dark btn-textspaceXL px-3" role="button">查詢 <i class="fas fa-search"></i></button>
+        </div>
+</form></div>
+<div class="container">
+    <h2 class="mt-4">
+        查詢結果
+    </h2>
+        <div class="dropdown text-right">
+            <button class="dropdown-toggle btn btn-sm" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">排序</button>
+            <div class="dropdown-menu">
+                <a class="dropdown-item active" href="/zh-tw/portal/travel?DataCode=Attraction&amp;dir=ascending&amp;sort=time" title="點入後會重新排序查詢結果">資料更新日期<i class="fas fa-arrow-down ml-2"></i></a><a class="dropdown-item" href="/zh-tw/portal/travel?DataCode=Attraction&amp;dir=ascending&amp;sort=id" title="點入後會重新排序查詢結果">編號</a><a class="dropdown-item" href="/zh-tw/portal/travel?DataCode=Attraction&amp;dir=ascending&amp;sort=name" title="點入後會重新排序查詢結果">名稱</a><a class="dropdown-item" href="/zh-tw/portal/travel?DataCode=Attraction&amp;dir=ascending&amp;sort=dataname" title="點入後會重新排序查詢結果">資料類型</a>
+            </div>
+        </div>
+        <a href="#" class="btn btn-sm mr-2">全部 <i class="badge badge-pill badge-dark">6,085</i></a>
+        <a href="/zh-tw/portal/travel/download?key=AQAAANCMnd8BFdERjHoAwE%2FCl%2BsBAAAACyPgvO%2Fe0Uiy6frZpDSr2gAAAAACAAAAAAAQZgAAAAEAACAAAADv6LuZ0kSuoVAMy5689y8VXG3sZxaw%2FsYjWeWyQQsDUgAAAAAOgAAAAAIAACAAAAC9YriEU97mwSi0OlShsLtX6X%2FXK2yoGnTgWZKW%2BzPa9GABAACi%2F5n2i%2BXrCAb5%2FBRjWxOcgk2xaYg7XAp8XAlSQqpTOxUdl9GucRW53p2hrg4yx3i4zKgVuliai64x5pyvmYnffX1LlT46MFGriXZxQRS0vxAyeWgj6J30BWiEIGyRcAP4t1ejuMP8dg3qRvPHu%2BATplv96aTnfMfMQtibfCeiv1%2FumKdp%2FnA%2B2p9fpN2axra%2F3ZtzUGABhtYoGRn61WUOg9EOVNWWocNjzGl00Nz%2B8qKPhFydfANoxNtYCcdaJWDG%2BYukRVi6zbbR27bHyCj0LKhzoGiE1dVBQZGcXopeVJEB7sV4aHvyAJH7HIL4Tx6els7VmMmO%2Bprq2x83m0k%2FUHhWSNev%2BC2tIKxckEtRwyMf9tTO9smiXNF9CZWQ5FBtC4CNzlCAVi4iAYppxTAXpvLRXv5iASkvrelkiXG2wOHUeUW6sz5a%2B13VfNKnESKuHRObi3KnNEEEzLlVdCANQAAAAPgFSsEz6nkwskHEwcX9n4X0oNdhAGymimjDsQQ5IP4oBtGjWQF3UhC7YWd7oIVHIUMXJib0Kgv3C7k8NXvcqGY%3D" class="btn btn-maincolor my-3">
+            <i class="fas fa-download pr-3"></i><span class="sr-only">資料下載</span> 下載查詢結果csv檔案
+        </a>
+</div>
+<div class="container card shadow">
+    <div class="card-body">
+            <table class="table table-hover">
+                <tbody>
+                        <tr>
+                            <td class="py-4">
+                                <div class="text-gray-500 small">ID: Attraction_345040000G_120045</div>
+                                <div class="h5">
+                                    <a href="/zh-tw/portal/travel/details/attraction_345040000g_120045">瑞穗生態教育館</a>
+                                </div>
+                                <div class="mb-3">
+                                    <span href="#" class="badge badge-hottag mr-2"> 景點</span>
+                                    <span>林業保育署</span>
+                                </div>
+                                <div class="mt-3">
+                                    <div class="row">
+                                        <div class="col-lg-7 col-md-12">
+                                            藉由各式解說媒材與展示設計，使遊客可以認識花蓮推動國土綠網之成果，並一窺玉里野生動物保護區豐富動植物資源。此外，本館也積極辦理到校推廣，以教案方式宣導保育各項議題，並將相關活動延伸至周邊社區及步道，結..
+                                        </div>
+                                        <div class="col-lg-5 col-md-12">
+                                            <div class="mt-3">
+                                                <div>
+                                                    <span class="square"></span>
+                                                    花蓮縣瑞穗鄉
+                                                    溫泉路一段58號
+                                                </div>
+                                                <div>
+                                                    <span class="square"></span>
+                                                    (03)8876631
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="py-4">
+                                <div class="text-gray-500 small">ID: Attraction_345040000G_120044</div>
+                                <div class="h5">
+                                    <a href="/zh-tw/portal/travel/details/attraction_345040000g_120044">南澳生態教育館</a>
+                                </div>
+                                <div class="mb-3">
+                                    <span href="#" class="badge badge-hottag mr-2"> 景點</span>
+                                    <span>林業保育署</span>
+                                </div>
+                                <div class="mt-3">
+                                    <div class="row">
+                                        <div class="col-lg-7 col-md-12">
+                                            南澳生態教育館和林業及自然保育署宜蘭分署南澳工作站位在同一棟建築物內。民國86年時，南澳工作站搬遷至此，將原有的樟樹造林地整理規劃為原生植物標本園，並在辦公室主建築物側邊設置南澳生態教育館，針對臺灣的..
+                                        </div>
+                                        <div class="col-lg-5 col-md-12">
+                                            <div class="mt-3">
+                                                <div>
+                                                    <span class="square"></span>
+                                                    宜蘭縣南澳鄉
+                                                    南澳村中正路55號
+                                                </div>
+                                                <div>
+                                                    <span class="square"></span>
+                                                    (03)9981060
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="py-4">
+                                <div class="text-gray-500 small">ID: Attraction_345040000G_120043</div>
+                                <div class="h5">
+                                    <a href="/zh-tw/portal/travel/details/attraction_345040000g_120043">拉拉山生態教育館</a>
+                                </div>
+                                <div class="mb-3">
+                                    <span href="#" class="badge badge-hottag mr-2"> 景點</span>
+                                    <span>林業保育署</span>
+                                </div>
+                                <div class="mt-3">
+                                    <div class="row">
+                                        <div class="col-lg-7 col-md-12">
+                                            拉拉山生態教育館是一棟地上二層、地下三層的建築，位於拉拉山森林步道起點，提供多功能的服務。  拉拉山生態教育館是林業及自然保育署各場域中距離紅檜純林最近的館舍。在區域範圍內依檜木巨木群所在位置規劃約3..
+                                        </div>
+                                        <div class="col-lg-5 col-md-12">
+                                            <div class="mt-3">
+                                                <div>
+                                                    <span class="square"></span>
+                                                    桃園市復興區
+                                                    華陵村巴陵207號
+                                                </div>
+                                                <div>
+                                                    <span class="square"></span>
+                                                    (03)3912063
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="py-4">
+                                <div class="text-gray-500 small">ID: Attraction_345040000G_120042</div>
+                                <div class="h5">
+                                    <a href="/zh-tw/portal/travel/details/attraction_345040000g_120042">火炎山生態教育館</a>
+                                </div>
+                                <div class="mb-3">
+                                    <span href="#" class="badge badge-hottag mr-2"> 景點</span>
+                                    <span>林業保育署</span>
+                                </div>
+                                <div class="mt-3">
+                                    <div class="row">
+                                        <div class="col-lg-7 col-md-12">
+                                            火炎山生態教育館是為一幢地上三層樓地下二樓的景觀建築，無論是外觀或內部設計，都以火炎山獨樹一格的天然特色為設計考量。  火炎山生態教育館坐落於苗栗縣三義鄉，於2005年4月16日啟用，是目前國內少見針..
+                                        </div>
+                                        <div class="col-lg-5 col-md-12">
+                                            <div class="mt-3">
+                                                <div>
+                                                    <span class="square"></span>
+                                                    苗栗縣三義鄉
+                                                    中正路73號
+                                                </div>
+                                                <div>
+                                                    <span class="square"></span>
+                                                    (037)878851
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="py-4">
+                                <div class="text-gray-500 small">ID: Attraction_345040000G_120041</div>
+                                <div class="h5">
+                                    <a href="/zh-tw/portal/travel/details/attraction_345040000g_120041">紅樹林生態教育館</a>
+                                </div>
+                                <div class="mb-3">
+                                    <span href="#" class="badge badge-hottag mr-2"> 景點</span>
+                                    <span>林業保育署</span>
+                                </div>
+                                <div class="mt-3">
+                                    <div class="row">
+                                        <div class="col-lg-7 col-md-12">
+                                            紅樹林生態教育館是一座小而美的生態教育館。室內現有的展示空間類型包括靜態展示空間與多媒體視聽空間，運用圖文、海報、燈箱等方式，介紹紅樹林明星物種－水筆仔的生長過程，以及紅樹林中的招潮蟹、彈塗魚與水鳥等..
+                                        </div>
+                                        <div class="col-lg-5 col-md-12">
+                                            <div class="mt-3">
+                                                <div>
+                                                    <span class="square"></span>
+                                                    新北市淡水區
+                                                    中正東路二段68號
+                                                </div>
+                                                <div>
+                                                    <span class="square"></span>
+                                                    0916850886
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="py-4">
+                                <div class="text-gray-500 small">ID: Attraction_345040000G_120039</div>
+                                <div class="h5">
+                                    <a href="/zh-tw/portal/travel/details/attraction_345040000g_120039">大武山生態教育館</a>
+                                </div>
+                                <div class="mb-3">
+                                    <span href="#" class="badge badge-hottag mr-2"> 景點</span>
+                                    <span>林業保育署</span>
+                                </div>
+                                <div class="mt-3">
+                                    <div class="row">
+                                        <div class="col-lg-7 col-md-12">
+                                            大武山生態教育館對大武山自然保留區的人文及森林生態環境有深入淺出的介紹，是一具現代化設備之訓練研習場所，可使民眾了解設置保留區的目的、功能，並索取相關資訊，進而達到愛護環境、自然保育，獲得環境教育之知..
+                                        </div>
+                                        <div class="col-lg-5 col-md-12">
+                                            <div class="mt-3">
+                                                <div>
+                                                    <span class="square"></span>
+                                                    臺東縣太麻里鄉
+                                                    金崙村溫泉35-2號
+                                                </div>
+                                                <div>
+                                                    <span class="square"></span>
+                                                    (089)771912
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="py-4">
+                                <div class="text-gray-500 small">ID: Attraction_345040000G_120038</div>
+                                <div class="h5">
+                                    <a href="/zh-tw/portal/travel/details/attraction_345040000g_120038">阿里山生態教育館</a>
+                                </div>
+                                <div class="mb-3">
+                                    <span href="#" class="badge badge-hottag mr-2"> 景點</span>
+                                    <span>林業保育署</span>
+                                </div>
+                                <div class="mt-3">
+                                    <div class="row">
+                                        <div class="col-lg-7 col-md-12">
+                                            為宣導自然保育觀念及讓遊客認識阿里山自然生態，林業及自然保育署嘉義分署利用舊阿里山工作站及其他舊建物重新規劃整建成阿里山生態教育館、森記．事 Forest Era｜林業故事館及山記．畫 A-l&#237;-sa..
+                                        </div>
+                                        <div class="col-lg-5 col-md-12">
+                                            <div class="mt-3">
+                                                <div>
+                                                    <span class="square"></span>
+                                                    嘉義縣阿里山鄉
+                                                    中正村68號
+                                                </div>
+                                                <div>
+                                                    <span class="square"></span>
+                                                    (05)2679755
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="py-4">
+                                <div class="text-gray-500 small">ID: Attraction_345040000G_110037</div>
+                                <div class="h5">
+                                    <a href="/zh-tw/portal/travel/details/attraction_345040000g_110037">阿里山林業鐵路</a>
+                                </div>
+                                <div class="mb-3">
+                                    <span href="#" class="badge badge-hottag mr-2"> 景點</span>
+                                    <span>林業保育署</span>
+                                </div>
+                                <div class="mt-3">
+                                    <div class="row">
+                                        <div class="col-lg-7 col-md-12">
+                                            阿里山林業鐵路係日據時期為開採森林資源而鋪設的產業鐵道，全線分為本線及支線，沿途歷經熱、暖、溫帶三種林相，自海拔30公尺的嘉義站，一路爬升至海拔2,216公尺的阿里山站。此外，旅客還可以在清晨時分搭乘..
+                                        </div>
+                                        <div class="col-lg-5 col-md-12">
+                                            <div class="mt-3">
+                                                <div>
+                                                    <span class="square"></span>
+                                                    嘉義市東區
+                                                    文化路308號
+                                                </div>
+                                                <div>
+                                                    <span class="square"></span>
+                                                    (05)2256918
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="py-4">
+                                <div class="text-gray-500 small">ID: Attraction_345040000G_100034</div>
+                                <div class="h5">
+                                    <a href="/zh-tw/portal/travel/details/attraction_345040000g_100034">阿里山林業村暨檜意森活村</a>
+                                </div>
+                                <div class="mb-3">
+                                    <span href="#" class="badge badge-hottag mr-2"> 景點</span>
+                                    <span>林業保育署</span>
+                                </div>
+                                <div class="mt-3">
+                                    <div class="row">
+                                        <div class="col-lg-7 col-md-12">
+                                            阿里山林業始於1899年，日治時期阿里山林場檜木資源而闢建阿里山林業鐵路，起點就在嘉義市北門，木材買賣集散為嘉義市帶來前所未有的繁榮，當時更因此列為臺灣四大都市之一。1906年5月，日本民間企業藤田組..
+                                        </div>
+                                        <div class="col-lg-5 col-md-12">
+                                            <div class="mt-3">
+                                                <div>
+                                                    <span class="square"></span>
+                                                    嘉義市東區
+                                                    共和路370號
+                                                </div>
+                                                <div>
+                                                    <span class="square"></span>
+                                                    (05)2779843
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="py-4">
+                                <div class="text-gray-500 small">ID: Attraction_345040000G_100033</div>
+                                <div class="h5">
+                                    <a href="/zh-tw/portal/travel/details/attraction_345040000g_100033">林田山林業文化園區</a>
+                                </div>
+                                <div class="mb-3">
+                                    <span href="#" class="badge badge-hottag mr-2"> 景點</span>
+                                    <span>林業保育署</span>
+                                </div>
+                                <div class="mt-3">
+                                    <div class="row">
+                                        <div class="col-lg-7 col-md-12">
+                                            隱身花蓮鳳林的林田山，舊稱摩里沙卡(MORISAKA-即日語&quot;森坂&quot;發音)，光復後改稱森榮，是台灣遺留下來最完整、最具特色的伐木基地，無論規模或重要性，都是&quot;台灣林業開發史&quot;上最重要的據點與見證。  ..
+                                        </div>
+                                        <div class="col-lg-5 col-md-12">
+                                            <div class="mt-3">
+                                                <div>
+                                                    <span class="square"></span>
+                                                    花蓮縣鳳林鎮
+                                                    森榮里林森路99巷99號
+                                                </div>
+                                                <div>
+                                                    <span class="square"></span>
+                                                    (03)8751703
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="py-4">
+                                <div class="text-gray-500 small">ID: Attraction_345040000G_030030</div>
+                                <div class="h5">
+                                    <a href="/zh-tw/portal/travel/details/attraction_345040000g_030030">雙流自然教育中心</a>
+                                </div>
+                                <div class="mb-3">
+                                    <span href="#" class="badge badge-hottag mr-2"> 景點</span>
+                                    <span>林業保育署</span>
+                                </div>
+                                <div class="mt-3">
+                                    <div class="row">
+                                        <div class="col-lg-7 col-md-12">
+                                            穿梭熱帶季風林，順沿溪流訪瀑布，探索生態樂學習，看見土地與人永續共存。  雙流國家森林遊樂區地處中央山脈與恒春半島之間的山區，內文溪貫穿其間，地形和水域多元的變化，造就兼具熱帶雨林、亞熱帶雨林、熱帶季..
+                                        </div>
+                                        <div class="col-lg-5 col-md-12">
+                                            <div class="mt-3">
+                                                <div>
+                                                    <span class="square"></span>
+                                                    屏東縣獅子鄉
+                                                    丹路村丹路2巷23號
+                                                </div>
+                                                <div>
+                                                    <span class="square"></span>
+                                                    (08)8701499
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="py-4">
+                                <div class="text-gray-500 small">ID: Attraction_345040000G_030029</div>
+                                <div class="h5">
+                                    <a href="/zh-tw/portal/travel/details/attraction_345040000g_030029">羅東自然教育中心</a>
+                                </div>
+                                <div class="mb-3">
+                                    <span href="#" class="badge badge-hottag mr-2"> 景點</span>
+                                    <span>林業保育署</span>
+                                </div>
+                                <div class="mt-3">
+                                    <div class="row">
+                                        <div class="col-lg-7 col-md-12">
+                                            乘著百年鐵道走進林業文化，踏訪蘭陽青山綠水，我們在城市中與自然一起生活。  位於羅東林業文化園區內，是早期林產業興盛時期太平山林場的重要轉運中心，日據時期的建築與產業遺址仍保留至今，包含運材火車、鐵道..
+                                        </div>
+                                        <div class="col-lg-5 col-md-12">
+                                            <div class="mt-3">
+                                                <div>
+                                                    <span class="square"></span>
+                                                    宜蘭縣羅東鎮
+                                                    中正北路118號
+                                                </div>
+                                                <div>
+                                                    <span class="square"></span>
+                                                    (03)9540823
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                </tbody>
+            </table>
+    </div>
+        <div class="square-i pagination justify-content-center">
+            <div class=""><ul class=""><li class="mr-1 active"><a class="page-link" title="第1頁">1</a></li><li class="mr-1"><a class="page-link" href="/zh-tw/portal/travel?DataCode=Attraction&amp;sort=time&amp;dir=descending&amp;page=2" title="第2頁">2</a></li><li class="mr-1"><a class="page-link" href="/zh-tw/portal/travel?DataCode=Attraction&amp;sort=time&amp;dir=descending&amp;page=3" title="第3頁">3</a></li><li class="mr-1"><a class="page-link" href="/zh-tw/portal/travel?DataCode=Attraction&amp;sort=time&amp;dir=descending&amp;page=4" title="第4頁">4</a></li><li class="mr-1"><a class="page-link" href="/zh-tw/portal/travel?DataCode=Attraction&amp;sort=time&amp;dir=descending&amp;page=5" title="第5頁">5</a></li><li class="mr-1 PagedList-skipToNext"><a class="page-link" href="/zh-tw/portal/travel?DataCode=Attraction&amp;sort=time&amp;dir=descending&amp;page=2" rel="next" title="下一頁"><span class="sr-only sr-only-focus">下一頁</span><i class="fas fa-angle-right"></i></a></li><li class="mr-1 PagedList-skipToLast"><a class="page-link" href="/zh-tw/portal/travel?DataCode=Attraction&amp;sort=time&amp;dir=descending&amp;page=508" title="最後頁"><span class="sr-only sr-only-focus">最後頁</span><i class="fas fa-angle-double-right"></i></a></li></ul></div>
+        </div>
+</div>
+
+    </div>
+
+    <!--4 back to top btn-->
+    <div id="btnTop" class="fixed-action-btn smooth-scroll d-print-none" style="display: block;">
+        <a href="#header" class="btn-floating btn-large d-flex flex-column">
+            <!-- <i class="fa fa-arrow-up"></i> -->
+            <span class="text-center fas fa-angle-double-up"></span>
+            <span class="text-center">TOP</span>
+        </a>
+    </div>
+<footer class="container-fluid footer-black text-center py-5 d-print-none">
+    <div class="row">
+        <div class="col-lg-6 col-md-12 footer-logo mb-3">
+            <img height="85" alt="交通部觀光署 LOGO" src="/Images/logo_tad.svg"><strong style="display: none;">交通部觀光署</strong>
+        </div>
+        <div class="col-lg-6 col-md-12 footer-text">
+            <div class="row">
+                <div class="col-12 pb-1">
+                    <a href="#Z" title="下方功能區塊" id="AZ" accesskey="Z" name="Z">:::</a>&nbsp;&nbsp;
+                    <a href="/zh-tw/portal/home/security" title="網站資訊安全政策">網站資訊安全政策</a>&emsp;|　
+                    <a href="/zh-tw/portal/home/privacy" title="隱私權保護政策">隱私權保護政策</a>&emsp;|　
+                    <a href="/zh-tw/portal/home/license" title="網站資料開放宣告">網站資料開放宣告</a>
+                        <span>&emsp;|&emsp;</span><a href="/zh-tw/portal/home/docs" title="文件下載及教學影片">文件下載及教學影片</a>
+                </div>
+                <div class="col-12 pb-1">
+                    中華民國交通部觀光署 Copyright © All rights reserved.
+                </div>
+                <div class="col-12 pb-1">地址：106433臺北市忠孝東路4段290號9樓</div>
+                <div class="col-12 pb-2">電話：(02)2349-1500</div>
+                <div class="col-12">
+                    <a href="https://accessibility.moda.gov.tw/Applications/Detail?category=20240607174502" title="無障礙網站(另開新視窗)" target="_blank"><img src="/Images/levelAA_2.1.png" border="0" width="88" height="31" alt="通過AA無障礙網頁檢測"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="/bundles/jquery?v=6dnGcLw43VdNYykvZ0Bs7heOyjpSgzp8DTx4xWzqJLo1"></script>
+
+    <script src="/bundles/jqueryval?v=CI5JZtNQqAbPgRE_TFCQSebTVo75lgprQ1gSkmAn3pI1"></script>
+
+    <script src="/bundles/jqueryui?v=AhotOArMVj2sfmDy1mRT6pDjz18hBXABB7D0MRuk07M1"></script>
+
+    <script src="/Scripts/popper.js"></script>
+
+    <script src="/Scripts/bootstrap.js"></script>
+
+    <script src="/Scripts/moment-with-locales.min.js"></script>
+
+    <script src="/Scripts/bootstrap-datetimepicker.min.js"></script>
+
+    <script src="/bundles/portal?v=vA2MBLERGm_u87rHHwZOxVu9ZweiTio7a7a7AsO8O6Y1"></script>
+
+        
+    <script>
+        (function () {
+
+            const type_ary = ['Attraction', 'Event', 'Hotel', 'Restaurant', 'TourismServiceSite', 'CyclingRoute', 'Trail']
+            const class_ary = ['AttractionClass', 'EventClass', 'HotelClass', 'CuisineClass', 'TourismServiceSiteClass', 'CyclingRouteClass', 'TrailClass']
+
+            $('input[name="DataCode"]').on('change', function () {
+                $(this).parent().siblings().prop("title", "")
+                $(this).parent().prop("title", "已勾選")
+                setClassFilters()
+            });
+
+            $('form').on('submit', function () {
+                let val = $('input[name="DataCode"]:checked').val()
+                let sel_idx = type_ary.indexOf(val)
+                clearClassFilters(sel_idx)
+            })
+
+            setClassFilters()
+
+            function setClassFilters() {
+                $('.filter-class1').addClass('d-none')
+
+                let val = $('input[name="DataCode"]:checked').val()
+
+                if (val == 'Attraction') $('#div-attraction-class').removeClass('d-none')
+                else if (val == 'Event') $('#div-event-class').removeClass('d-none')
+                else if (val == 'Hotel') $('#div-hotel-class').removeClass('d-none')
+                else if (val == 'Restaurant') $('#div-cuisine-class').removeClass('d-none')
+                else if (val == 'TourismServiceSite') $('#div-site-class').removeClass('d-none')
+                else if (val == 'CyclingRoute') $('#div-cycling-class').removeClass('d-none')
+                else if (val == 'Trail') $('#div-trail-class').removeClass('d-none')
+            }
+
+            function clearClassFilters(selected_index) {
+                for (let i = 0; i < class_ary.length; i++) {
+                    if (i == selected_index) continue
+                    $('#' + class_ary[i]).val('')
+                }
+            }
+        })();
+    </script>
+
+</body>
+</html>

@@ -1,4 +1,7 @@
-from urllib.parse import quote_plus  # 密碼含 @ : % 等符號時要先做 URL 編碼才能進連線字串
+from fileinput import filename
+import os
+from urllib import response
+from urllib.parse import quote_plus, urlparse  # 密碼含 @ : % 等符號時要先做 URL 編碼才能進連線字串
 from bs4 import BeautifulSoup
 import pandas as pd
 import requests
@@ -12,6 +15,7 @@ from crawler.config import (
     MYSQL_PORT,
     SPANNER_INSTANCE,
 )
+import json
 from crawler.worker import app
 from crawler.crawler_tdx import get_tdx_token, get_tdx_title
 from crawler.crawler_blog import web_pageNext
@@ -70,21 +74,132 @@ def crawler_mediaTW(url, page):
     data0 = web_pageNext(url, page)
     print(data0)
     
+    data_list = []
+    
     for d in data0:
-        url_d = f"https://media.taiwan.net.tw/zh-tw/portal/travel/details/{d.lower}"
-        
+        url_page = f"https://media.taiwan.net.tw/zh-tw/portal/travel/details/{d.strip().lower()}"
+        #print(url_page)
         headers = {
                     'User-Agent': (
-                                    'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML,'
-                                    ' like Gecko) Chrome/120.0.0.0 Safari/537.36'
+                                    'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36'
                     )
         }
-    
-        # 發送請求並直接解析 JSON
+        response_item = requests.get(url_page, headers=headers)
+        #print(response_item.raise_for_status())
+                    
+        soup_item = BeautifulSoup(response_item.text, 'html.parser')
+        
+        target = soup_item.find("a",class_='btn btn-block btn-maincolor my-3')
+        url_d = f"https://media.taiwan.net.tw{target.get('href')}"
+
+        # 2. 發送請求並直接解析 JSON
         try:
             response = requests.get(url_d, headers=headers)
-            print(response.raise_for_status())
+            response.raise_for_status()
 
+        # 將內容解析為 Python 的字典/列表
+            data = response.json()
+            print('資料獲取成功！這是一份 JSON 文字資料，而非 ZIP 檔。')
+
+        # 3. 將資料儲存為 JSON 檔案（確保中文不會變成亂碼）
+            output_file = 'data_d.json'
+            with open(output_file, 'w', encoding='utf-8') as f:
+                json.dump(data, f, ensure_ascii=False, indent=4)
+
+            print(f'已成功將資料儲存至：{output_file}')
+
+            with open('data_d.json', 'r', encoding='utf-8-sig') as f:
+                d = json.load(f)
+                data_list.append(d)
+                #df = pd.json_normalize(d)
+
+            #df =  pd.read_json('data_d.json')
+            df = pd.DataFrame(data_list)
+            print(df)
+
+        # # 4. 測試讀取並列印部分內容
+        #     print('\n--- 步道資料預覽 ---')
+        #     print(f"步道名稱：{data.get('TrailName')}")
+        #     print(f"步道編號：{data.get('TrailID')}")
+        #     print(f"步道簡介：{data.get('Description')[:50]}...")
+
+        except requests.exceptions.HTTPError as e:
+            print(f'連線失敗：{e}')
+        except json.JSONDecodeError:
+            print('伺服器回傳的內容不是標準的 JSON 格式！')
+        except Exception as e:
+            print(f'發生其他錯誤：{e}')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'''
+        # 發送請求並直接解析 JSON
+        try:
+            response_item = requests.get(url_page, headers=headers)
+            #print(response_item.raise_for_status())
+            
+            soup_item = BeautifulSoup(response_item.text, 'html.parser')
+
+            target = soup_item.find("a",class_='btn btn-block btn-maincolor my-3')
+            url_d = f"https://media.taiwan.net.tw{target.get('href')}"
+            #print(url_d)
+            
+            res = requests.get(url_d)
+            print(res)
+            print(type(res))
+            
+            import os
+            from urllib.parse import urlparse
+
+            parsed_url = urlparse(url_d)
+            filename = os.path.basename(parsed_url.path)
+
+            # 如果網址結尾沒有檔名，就設定一個預設檔名
+            if not filename:
+                filename = "downloaded_file"
+
+                response = requests.get(url_d)
+
+            if  response.status_code == 200:
+                with open(filename, "wb") as f:
+                    f.write(response.content)
+                print(f"下載完成，檔案儲存為：{filename}")
+                with open(filename , 'r', encoding='utf-8-sig') as f:
+                    data = json.load(f)
+                    df = pd.json_normalize(data)
+                    print(df)
+            
+            else:
+                print(f"下載失敗，錯誤代碼：{response.status_code}")
+            
+
+            # import json
+            # import pandas as pd
+            # with open(f'{filename}', 'r', encoding='utf-8-sig') as f:
+            #     data = json.load(f)
+            #     df = pd.json_normalize(data)
+             
+            #     print(df)
+            
+        finally:
+            print('ok')
+'''
+
+
+
+
+'''
         # 將內容解析為 Python 的字典/列表
             data = response.json()
         #print('資料獲取成功！這是一份 JSON 文字資料，而非 ZIP 檔。')
@@ -108,7 +223,7 @@ def crawler_mediaTW(url, page):
         print('伺服器回傳的內容不是標準的 JSON 格式！')
         except Exception as e:
         print(f'發生其他錯誤：{e}')
-            
+'''
 
 
 

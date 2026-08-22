@@ -1,0 +1,124 @@
+{
+    "AttractionID": "Attraction_345040000G_030029",
+    "AttractionName": "羅東自然教育中心",
+    "AlternateNames": [],
+    "Description": "乘著百年鐵道走進林業文化，踏訪蘭陽青山綠水，我們在城市中與自然一起生活。  位於羅東林業文化園區內，是早期林產業興盛時期太平山林場的重要轉運中心，日據時期的建築與產業遺址仍保留至今，包含運材火車、鐵道文物、竹林車站等，當時的貯木池如今則化身為生態池，水域與陸域環境構成多樣化的棲地，生物相十分豐富。",
+    "PositionLat": 24.6831755366078,
+    "PositionLon": 121.771892666844,
+    "Geometry": null,
+    "AttractionClasses": [
+        26
+    ],
+    "ServiceTimeInfo": "",
+    "TrafficInfo": "［開車前往］路線說明：走北宜高速公路（國道五號）羅東出口，右轉接縣道196線，直行約5分鐘，過十字路口後穿過鐵路地下道，第一個紅綠燈右轉中正北路，直行約1分鐘即可抵達林業文化園區南停車場（林場肉羹斜對面），本停車場為收費停車場，停車費以小時計算。［大眾運輸］搭乘國道客運：首都客運『首都之星』：起訖點：台北市政府轉運站－羅東轉運站。於羅東站下車後，步行至萊爾富便利商店右轉直行至羅東火車站後站，穿越火車站至前站出口，直行至中正北路口右轉，沿中正北路直行約700公尺便可抵達羅東林業文化園區。步行時間約20分鐘。［大眾運輸］搭乘國道客運：葛瑪蘭客運：起訖點：板橋轉運站－台北轉運站－羅東轉運站。於羅東站下車後，步行至萊爾富便利商店右轉直行至羅東火車站後站，穿越火車站至前站出口，直行至中正北路口右轉，沿中正北路直行約700公尺便可抵達羅東林業文化園區。步行時間約20分鐘。［大眾運輸］搭乘國道客運：大都會客運『都會之星』：起訖點：捷運大坪林站－羅東轉運站。於羅東站下車後，步行至萊爾富便利商店右轉直行至羅東火車站後站，穿越火車站至前站出口，直行至中正北路口右轉，沿中正北路直行約700公尺便可抵達羅東林業文化園區。步行時間約20分鐘。［大眾運輸］搭乘國道客運：國光客運：起訖點：捷運圓山站－捷運南港展覽館站－羅東轉運站。於羅東站下車後，步行至萊爾富便利商店右轉直行至羅東火車站後站，穿越火車站至前站出口，直行至中正北路口右轉，沿中正北路直行約700公尺便可抵達羅東林業文化園區。步行時間約20分鐘。［大眾運輸］搭乘宜蘭縣內客運：國光客運：起訖點：頭城─南方澳線（路線編號：1766及1767），於「竹林站」下車後，轉林場路約步行3分鐘後即可抵達羅東林業文化園區。［大眾運輸］搭乘火車：羅東火車站前站出口，直行至中正北路口右轉，沿中正北路直行約700公尺便可抵達羅東林業文化園區。步行時間約10～15分鐘。詳情請至交通部台灣鐵路管理局網站查詢。",
+    "ParkingInfo": "",
+    "Facilities": [],
+    "ServiceStatus": 1,
+    "IsPublicAccess": 1,
+    "IsAccessibleForFree": 0,
+    "FeeInfo": "",
+    "PaymentMethods": [],
+    "WebsiteUrl": "https://recreation.forest.gov.tw/Education/NC?typ_id=LD",
+    "ReservationURLs": [],
+    "MapURLs": [
+        "https://recreation.forest.gov.tw/Files/Education/NC/photo/LD/02/LD_%E7%BE%85%E6%9D%B1%E8%87%AA%E7%84%B6%E6%95%99%E8%82%B2%E4%B8%AD%E5%BF%83%E4%BA%A4%E9%80%9A%E8%B7%AF%E7%B7%9A%E5%9C%96(%E6%AD%A3%E5%B8%B8%E7%89%88)-20140305%E4%BF%AE%E6%AD%A3.jpg"
+    ],
+    "SameAsURLs": [],
+    "VisitDuration": null,
+    "AssetsClass": null,
+    "Tags": [],
+    "Remarks": "",
+    "UpdateTime": "2026-08-22T00:20:12+08:00",
+    "PostalAddress": {
+        "City": "宜蘭縣",
+        "CityCode": "10002",
+        "Town": "羅東鎮",
+        "TownCode": "10002020",
+        "ZipCode": "265",
+        "StreetAddress": "中正北路118號"
+    },
+    "Telephones": [
+        {
+            "Tel": "(03)9540823",
+            "Ext": null
+        }
+    ],
+    "Images": [
+        {
+            "Name": "課程搬運木材",
+            "Description": "照片提供｜羅東自然教育中心",
+            "URL": "https://recreation.forest.gov.tw/Files/Education/NC/Album/LD/03_DSC_1944.JPG",
+            "Width": null,
+            "Height": null,
+            "Keywords": []
+        },
+        {
+            "Name": "羅東自然教育中心大門",
+            "Description": "照片提供｜羅東自然教育中心",
+            "URL": "https://recreation.forest.gov.tw/Files/Education/NC/Album/LD/05_DSCN1911.jpg",
+            "Width": null,
+            "Height": null,
+            "Keywords": []
+        },
+        {
+            "Name": "學生課程活動",
+            "Description": "照片提供｜羅東自然教育中心",
+            "URL": "https://recreation.forest.gov.tw/Files/Education/NC/Album/LD/07_DSC_0680_%E5%90%9B.jpg",
+            "Width": null,
+            "Height": null,
+            "Keywords": []
+        },
+        {
+            "Name": "風車課程活動",
+            "Description": "照片提供｜羅東自然教育中心",
+            "URL": "https://recreation.forest.gov.tw/Files/Education/NC/Album/LD/08_P7276072.JPG",
+            "Width": null,
+            "Height": null,
+            "Keywords": []
+        },
+        {
+            "Name": "鐵道之謎",
+            "Description": "照片提供｜羅東自然教育中心",
+            "URL": "https://recreation.forest.gov.tw/Files/Education/NC/Album/LD/01_%E9%90%B5%E9%81%93%E4%B9%8B%E8%AC%8E.JPG",
+            "Width": null,
+            "Height": null,
+            "Keywords": []
+        },
+        {
+            "Name": "濕地生態",
+            "Description": "照片提供｜羅東自然教育中心",
+            "URL": "https://recreation.forest.gov.tw/Files/Education/NC/Album/LD/02_%E6%BF%95%E5%9C%B0%E7%94%9F%E6%85%8B2.JPG",
+            "Width": null,
+            "Height": null,
+            "Keywords": []
+        },
+        {
+            "Name": "池畔日誌",
+            "Description": "照片提供｜羅東自然教育中心",
+            "URL": "https://recreation.forest.gov.tw/Files/Education/NC/Album/LD/04_%E6%B1%A0%E7%95%94%E6%97%A5%E8%AA%8C%20(1).JPG",
+            "Width": null,
+            "Height": null,
+            "Keywords": []
+        },
+        {
+            "Name": "森動館",
+            "Description": "照片提供｜羅東自然教育中心",
+            "URL": "https://recreation.forest.gov.tw/Files/Education/NC/Album/LD/06_p3%E6%A3%AE%E5%8B%95%E9%A4%A8.JPG",
+            "Width": null,
+            "Height": null,
+            "Keywords": []
+        }
+    ],
+    "Organizations": [],
+    "LocatedCities": [],
+    "SocialMediaURLs": [
+        {
+            "Name": "羅東自然教育中心",
+            "Description": null,
+            "Class": null,
+            "URL": "https://www.facebook.com/luodong",
+            "Keywords": [],
+            "Tags": []
+        }
+    ]
+}
