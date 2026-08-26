@@ -76,9 +76,9 @@ def crawler_tdx(title, sub_url, parameter):
         # df = df.drop(columns=['StationPosition']).join(expanded_df2)
         # print(df.dtypes)
 
-        dataExtend(data0)
+        df = dataExtend(data0)
 
-        #upload_data_to_mysql(df,title)
+        upload_data_to_mysql(df,title)
 
 
 def upload_data_to_mysql(df: pd.DataFrame, title):

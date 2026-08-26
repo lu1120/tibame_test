@@ -8,8 +8,8 @@ from crawler.tasks_crawler_tdx import crawler_tdx
 # Celery worker 會從 RabbitMQ 取出任務並平行處理, 比循序執行快很多
 
 #TDX的各種參數
-#TDX_title_lists = ['bus', 'train', 'metro', 'bike']
-TDX_title_lists = ['metro']
+TDX_title_lists = ['bus', 'train', 'metro', 'bike']
+#TDX_title_lists = ['metro']
 TDX_title_dicts = {'bus': ['/v2/Bus/Stop/City/', '/v2/Bus/Station/City/'], 
                    'train': ['/v3/Rail/TRA/Station'], 
                    'metro': ['/v2/Rail/Metro/Station/'], 

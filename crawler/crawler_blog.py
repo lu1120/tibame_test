@@ -216,7 +216,7 @@ def web_pageNext(url, page = 100):
         headers = {
                     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36',
         }
-        response = requests.get(api_url, headers=headers)
+        response = requests.get(api_url, headers=headers, verify=False)
 
     # 用 BeautifulSoup 解析 HTML
         soup = BeautifulSoup(response.text, "html.parser")

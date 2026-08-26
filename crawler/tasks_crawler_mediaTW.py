@@ -96,11 +96,12 @@ def upload_data_to_mysql(df: pd.DataFrame, title):
 
     
 @app.task()
-def crawler_mediaTW(url, page):
+def crawler_mediaTW(url, page, title):
     #url = "https://media.taiwan.net.tw/zh-tw/portal/travel?DataCode=Trail&DataId=&Field=&Keyword=&County=&UpdateYearStart=&UpdateMonthStart=&UpdateYearEnd=&UpdateMonthEnd=&AttractionClass=&EventClass=&HotelClass=&CuisineClass=&TourismServiceSiteClass=&CyclingRouteClass=&TrailClass="
 
     response = requests.post(
-                            url
+                            url, 
+                            verify=False
                         )
     
     print("Access Token 取得成功")
@@ -118,7 +119,7 @@ def crawler_mediaTW(url, page):
                                     'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/151.0.0.0 Safari/537.36'
                     )
         }
-        response_item = requests.get(url_page, headers=headers)
+        response_item = requests.get(url_page, headers=headers, verify=False)
         #print(response_item.raise_for_status())
                     
         soup_item = BeautifulSoup(response_item.text, 'html.parser')
@@ -128,7 +129,7 @@ def crawler_mediaTW(url, page):
 
         # 2. 發送請求並直接解析 JSON
         try:
-            response = requests.get(url_d, headers=headers)
+            response = requests.get(url_d, headers=headers, verify=False)
             response.raise_for_status()
 
         # 將內容解析為 Python 的字典/列表
@@ -165,11 +166,13 @@ def crawler_mediaTW(url, page):
             
     df = pd.DataFrame(data_list)
     print(df)
-    print(df.dtypes)
+    #print(df.dtypes)
 
-    df = dataExtend(data_list)
+    for d in data_list:
+       
+        df = dataExtend(d)
 
-    upload_data_to_mysql(df,'attraction')
+        upload_data_to_mysql(df,title)
 
 
 
