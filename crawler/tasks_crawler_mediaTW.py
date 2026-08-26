@@ -19,6 +19,7 @@ import json
 from crawler.worker import app
 from crawler.crawler_tdx import get_tdx_token, get_tdx_title
 from crawler.crawler_blog import web_pageNext
+from crawler.get_data import dataExtend
 
 # 教學用: 最簡單版本, 只抓資料並印出, 不上傳資料庫
 # 適合剛接觸 Celery 的人, 先確認「任務能被派送、worker 能收到、API 能呼叫」
@@ -60,6 +61,39 @@ def crawler_tdx(title, sub_url, parameter):
         data0 = get_tdx_title(url, j, parameter[i] ,token=acess_token)
         df = pd.DataFrame(data0)
         print(df)
+
+
+def upload_data_to_mysql(df: pd.DataFrame, title):
+    # 定義資料庫連線字串（MySQL 資料庫）
+    # 格式：mysql+pymysql://使用者:密碼@主機:port/資料庫名稱
+    # 上傳到 mydb, 同學可切換成自己的 database
+    # 密碼要先 quote_plus 做 URL 編碼：連線字串裡 @ 分隔「帳密」與「主機」、: 分隔「主機」與「port」,
+    # 密碼本身含這些符號時（強密碼常見）會把字串切歪, 出現 invalid literal for int() 之類的解析錯誤
+    address = f"mysql+pymysql://{MYSQL_ACCOUNT}:{quote_plus(MYSQL_PASSWORD)}@{MYSQL_HOST}:{MYSQL_PORT}/mydb"
+
+    # 建立 SQLAlchemy 引擎物件
+    engine = create_engine(address)
+
+    # 多個 worker 同時首次寫入時，可能同時嘗試建表導致衝突
+    # 第一次失敗後重試一次即可（表已被另一個 worker 建好）
+    try:
+        df.to_sql(
+            f"{title}Table",
+            con=engine,
+            if_exists="append",
+            index=False,
+        )
+        print(f"{title}Table建立Ok")
+    except Exception:
+        df.to_sql(
+            f"{title}Table",
+            con=engine,
+            if_exists="append",
+            index=False,
+        )
+        print(f"{title}Table建立Ok")
+
+
     
 @app.task()
 def crawler_mediaTW(url, page):
@@ -131,6 +165,11 @@ def crawler_mediaTW(url, page):
             
     df = pd.DataFrame(data_list)
     print(df)
+    print(df.dtypes)
+
+    df = dataExtend(data_list)
+
+    upload_data_to_mysql(df,'attraction')
 
 
 
@@ -229,33 +268,6 @@ def crawler_mediaTW(url, page):
 
 
 
-def upload_data_to_mysql(df: pd.DataFrame):
-    # 定義資料庫連線字串（MySQL 資料庫）
-    # 格式：mysql+pymysql://使用者:密碼@主機:port/資料庫名稱
-    # 上傳到 mydb, 同學可切換成自己的 database
-    # 密碼要先 quote_plus 做 URL 編碼：連線字串裡 @ 分隔「帳密」與「主機」、: 分隔「主機」與「port」,
-    # 密碼本身含這些符號時（強密碼常見）會把字串切歪, 出現 invalid literal for int() 之類的解析錯誤
-    address = f"mysql+pymysql://{MYSQL_ACCOUNT}:{quote_plus(MYSQL_PASSWORD)}@{MYSQL_HOST}:{MYSQL_PORT}/mydb"
-
-    # 建立 SQLAlchemy 引擎物件
-    engine = create_engine(address)
-
-    # 多個 worker 同時首次寫入時，可能同時嘗試建表導致衝突
-    # 第一次失敗後重試一次即可（表已被另一個 worker 建好）
-    try:
-        df.to_sql(
-            "TaiwanStockPrice",
-            con=engine,
-            if_exists="append",
-            index=False,
-        )
-    except Exception:
-        df.to_sql(
-            "TaiwanStockPrice",
-            con=engine,
-            if_exists="append",
-            index=False,
-        )
 
 
 # 註冊 task, 有註冊的 task 才可以變成任務發送給 rabbitmq

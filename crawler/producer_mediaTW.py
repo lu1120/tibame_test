@@ -3,6 +3,7 @@
 # 對應的 consumer 就是 tasks_crawler_finmind.py 裡註冊的 crawler_finmind_print task
 from crawler.tasks_crawler_mediaTW import crawler_mediaTW
 
+
 # for 迴圈, 可一次發送多個任務
 # 這樣一次就能派送 5 支股票的爬蟲任務到 RabbitMQ
 # Celery worker 會從 RabbitMQ 取出任務並平行處理, 比循序執行快很多
@@ -26,8 +27,8 @@ TDX_title_dicts2 = {'bus': ["Kaohsiung", "Kaohsiung"],
 #     # .delay() 是 Celery 的非同步派送捷徑, 呼叫完會立刻回傳, 不等 task 執行完
 #     crawler_finmind_print.delay(stock_id=stock_id)
     
-url_list = ['Attraction&DataId', 'Event&DataId', 'Restaurant&DataId', 'CyclingRoute&DataId', 'Trail&DataId']    
-
+#url_list = ['Attraction&DataId', 'Event&DataId', 'Restaurant&DataId', 'CyclingRoute&DataId', 'Trail&DataId']    
+url_list = ['Attraction&DataId']
 
 for i in url_list:
     #print(f"預計抓{title}站點資料")
