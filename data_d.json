@@ -1,63 +1,61 @@
 {
-    "EventID": "Event_A15011300H_020611",
-    "EventName": "春遊東北角・壯圍迎新春 手作體驗與集章活動同步開跑",
+    "CyclingRouteID": "CyclingRoute_A15011000H_000400",
+    "CyclingRouteName": "湖海灣自行車道",
     "AlternateNames": [],
-    "Description": "春節連假就要走春！交通部觀光署東北角及宜蘭海岸國家風景區管理處(以下簡稱東北角管理處)春節初一（2/17）起至元宵節（3/3）期間，推出多項精彩活動，包括「春遊東北角 集章換限量小禮物」與「春節相約壯圍玩手作」，邀請民眾與家人朋友一起動手、慢遊東北角，度過充滿祝福與歡樂的春節假期。 集章換限量小禮物迎新年 初一（2/17）起至元宵節（3/3）期間，民眾只要前往管理處四大遊客中心（福隆、大里、南方澳、壯圍），完成集滿四個指定印章，即可憑集章卡至壯圍遊客中心兌換限量小禮物乙份，活動贈品數量有限，兌換完畢即截止。民眾可把握春節與元宵連假，規劃一趟輕鬆有趣的東北角走春集章之旅，邊遊玩邊收藏滿滿好運與祝福。 壯圍手作體驗 納福吉祥又好玩 春節期間(初一至初六)，壯圍遊客中心推出天天不打烊的手作體驗活動，邀請民眾親手打造新春吉祥好物，體驗項目有：好運牽線漁網背帶、新春吉祥手鍊、龜來運轉香蕉絲擺飾、新春",
-    "PositionLat": 24.73725,
-    "PositionLon": 121.8201,
-    "Geometry": null,
-    "EventClasses": [
-        4
-    ],
-    "TrafficInfo": "",
+    "Description": "可以同時遠眺基隆嶼、基隆港及野柳岬，同時欣賞排隊等候入港的船隻。",
+    "Geometry": "LINESTRING (121.7083271 25.17280915, 121.7082902 25.17271312, 121.7082801 25.17265842, 121.7082519 25.17251763, 121.7082184 25.17240945, 121.7082018 25.17233457, 121.7081822 25.17226052, 121.7081775 25.17217406, 121.7081767 25.17211486, 121.7081869 25.17209121, 121.7081979 25.17211829, 121.7082296 25.17225439, 121.7082419 25.17230002, 121.7082722 25.17231609, 121.7082827 25.17229788, 121.7082877 25.17223843, 121.7082849 25.17216944, 121.7082745 25.17199959, 121.7082781 25.17191996, 121.7083115 25.17172792, 121.7083587 25.17162687, 121.70839 25.17155243, 121.7084145 25.1714541, 121.7084258 25.17144831, 121.7084482 25.17140769, 121.7084877 25.17136946, 121.7085023 25.17134669, 121.7085053 25.17134772)",
+    "CyclingRouteClass": 2,
+    "ServiceTimeInfo": "",
+    "TrafficInfo": "獅子公園->湖海灣",
     "ParkingInfo": "",
     "Facilities": [],
+    "ServiceStatus": 1,
+    "IsPublicAccess": 1,
     "IsAccessibleForFree": 0,
     "FeeInfo": "",
     "PaymentMethods": [],
-    "WebsiteUrl": "https://www.necoast-nsa.gov.tw/Activity-News-Content.aspx?a=8&nid=2191&l=1",
+    "WebsiteUrl": "",
     "ReservationURLs": [],
     "MapURLs": [],
     "SameAsURLs": [],
-    "Participant": "",
-    "StartDateTime": "2026-02-09T00:00:00+08:00",
-    "EndDateTime": "2126-02-26T00:00:00+08:00",
-    "EventStatus": "EventScheduled",
-    "PreviousStartDates": [],
-    "CalendarURLs": [],
-    "Tags": [],
-    "Remarks": "",
-    "UpdateTime": "2026-08-26T23:10:21+08:00",
+    "VisitDuration": null,
+    "IsCircle": null,
+    "CyclingLength": 1200.0,
+    "CyclingWidth": 3.0,
+    "RoadWidth": 12.0,
+    "CyclingAltitude": 24.0,
+    "Slope": 3.0,
+    "Pavements": [],
+    "HasLamp": 0,
+    "Direction": 2,
+    "CyclingType": null,
+    "NetworkType": 0,
+    "ConstructionStatus": 1,
+    "Structure": 4,
+    "BranchNo": 0,
+    "Remarks": "騎乘時請小心坡度",
+    "UpdateTime": "2026-08-27T00:00:53+08:00",
     "PostalAddress": {
-        "City": "宜蘭縣",
-        "CityCode": "10002",
-        "Town": "壯圍鄉",
-        "TownCode": "10002060",
-        "ZipCode": "263",
-        "StreetAddress": "壯濱路二段196巷18號"
+        "City": "基隆市",
+        "CityCode": "10017",
+        "Town": "安樂區",
+        "TownCode": "10017060",
+        "ZipCode": "204",
+        "StreetAddress": "基金一路208巷159號"
     },
     "Telephones": [
         {
-            "Tel": "(03)9382420",
+            "Tel": "(02)24319343",
             "Ext": null
         }
     ],
-    "Images": [
-        {
-            "Name": "南方澳",
-            "Description": "南方澳",
-            "URL": "https://www.necoast-nsa.gov.tw/UserFiles/image/news/20260209%20(6).jpg",
-            "Width": null,
-            "Height": null,
-            "Keywords": []
-        }
-    ],
+    "Images": [],
     "Organizations": [
         {
-            "Name": "東北角及宜蘭海岸國家風景區管理處",
+            "Name": "北海岸及觀音山國家風景區管理處",
             "Class": "Provider",
             "TaxCode": null,
-            "AgencyCode": "A15011300H",
+            "AgencyCode": "A15011000H",
             "URL": null,
             "MobilePhones": [],
             "Faxes": [],
@@ -65,6 +63,23 @@
             "Telephones": []
         }
     ],
-    "LocatedCities": [],
+    "LocatedCities": [
+        {
+            "Name": "起點",
+            "Class": 2,
+            "City": "基隆市",
+            "CityCode": "10017",
+            "Town": "安樂區",
+            "TownCode": "10017060"
+        },
+        {
+            "Name": "迄點",
+            "Class": 3,
+            "City": "基隆市",
+            "CityCode": "10017",
+            "Town": "安樂區",
+            "TownCode": "10017060"
+        }
+    ],
     "SocialMediaURLs": []
 }

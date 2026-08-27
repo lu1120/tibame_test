@@ -1,0 +1,38 @@
+services:
+  metabase:
+    image: metabase/metabase:latest
+    container_name: metabase
+    hostname: metabase
+    ports:
+      - 3000:3000
+    # 設定庫（application database）放 MySQL 的 metabasedb —— production 慣用做法
+    # 啟動前置（順序固定，見課程手冊08 Step 2）：
+    #   1. MySQL 已啟動（docker-compose-local.yml）
+    #   2. metabasedb 資料庫與 metabase_app 帳號已建立
+    #   3. MySQL 已接上 my_network（docker network connect my_network mysql）
+    environment:
+      MB_DB_TYPE: mysql
+      MB_DB_HOST: mysql          # Docker 網路內的服務名，不是 127.0.0.1
+      MB_DB_PORT: 3306
+      MB_DB_DBNAME: metabasedb   # 設定庫，跟資料來源 mydb 是不同 database
+      MB_DB_USER: metabase_app   # 設定庫專用帳號（完整讀寫，Metabase 要自己建表）
+      MB_DB_PASS: "1234"
+    networks:
+      - my_network
+    healthcheck:
+      test: curl --fail -I http://localhost:3000/api/health || exit 1
+      interval: 15s
+      timeout: 5s
+      retries: 5
+
+  map-server:
+    image: nginx:alpine
+    container_name: map_server
+    volumes:
+      - ./maps:/usr/share/nginx/html/maps:ro
+    ports:
+      - "8081:80"
+
+networks:
+  my_network:
+    external: true
